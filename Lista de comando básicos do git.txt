@@ -1,0 +1,52 @@
+1- Criar arquivo .gitignore na pasta do projeto:
+a) Crie um arquivo gitignore.txt
+b) Cole e salve o texto gitignore referente a linguagem de programação utilizada
+c) Renomeie o arquivo utilizando o prompet de comandos: ren gitignore.txt .gitignore
+
+2- Abra o gitbash na pasta do projeto.
+
+3- Execute o comando para gerar o repositório: git init
+
+4- Defina para o git quem você é:
+a) git config --global user.name "Seu nome"
+b) git config --global user.email "Seu email"
+
+5- Para verificar como está o repositório: git status
+a) Caso apareça arquivos em vermelho, os mesmos ainda não foram rastreados pelo git (untracked)
+b) Caso apareça arquivos em verde, os mesmos estão prontos para serem commitados (stage)
+
+6- Salvar uma versão do projeto: commit
+a) git add .
+b) git commit -m "Descrição do commit"
+
+7- Verificar commits existentes: git log
+
+8- Para mostrar um resumo apenas do ultimo comite: git log --oneline
+
+9- Descartar todas as modificações e voltar ao estado do ultimo commit
+a) git clean -df
+b) git checkout -- .
+
+10- Remover o último commit mantendo as alterações nos arquivos: git reset --soft HEAD~1
+
+11- Remover o último commit, inclusive as alterações nos arquivos: git reset --hard HEAD~1
+
+12- Navegar entre commits, alterando os arquivos temporariamente: git checkout <código do commit>
+    (Tem que estar sem alteração para adicionar/commitar.)
+
+13- Voltar para o último commit: git chekout <nome do branch>
+    (Exemplo nome do branch: master)
+
+14- Associar o repositório local ao repositório remoto, dando o apelido de "origin" a ele:
+    git remote add origin <URI do repositório remoto>
+
+15- Associar o repositório local ao repositório remoto, mantendo o mesmo apelido:
+    git remote set-url origin <URI do repositório remoto>
+
+16- Subir o repositório local para o Github: git push -u origin master
+Nota: Se foi usado a opção -u, nas próximas vezes que for subir o branch master, basta fazer: git push
+
+17- Copiar o repositório, inclusive o histórico de commits: git clone <URI do repositório remoto>
+
+18- Atualizar o repositório local: git pull origin master
+
